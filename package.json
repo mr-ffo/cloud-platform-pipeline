@@ -1,0 +1,25 @@
+{
+    "name": "cloud-platform-pipeline",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Production-grade Cloud Platform built with Pulumi, AWS and GitHub Actions",
+    "scripts": {
+        "build": "tsc --noEmit",
+        "format": "prettier . --write",
+        "format:check": "prettier . --check"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^7.0.0",
+        "@pulumi/awsx": "^3.0.0",
+        "@pulumi/pulumi": "^3.113.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^18",
+        "eslint": "^10.7.0",
+        "globals": "^17.7.0",
+        "prettier": "^3.9.5",
+        "typescript": "^5.0.0",
+        "typescript-eslint": "^8.64.0"
+    }
+}
