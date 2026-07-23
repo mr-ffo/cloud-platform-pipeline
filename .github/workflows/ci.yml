@@ -12,7 +12,7 @@ on:
             - dev
 
 jobs:
-    validate:
+    quality-and-security:
         name: Validate Infrastructure Code
         runs-on: ubuntu-latest
 
@@ -34,6 +34,11 @@ jobs:
 
             - name: Check Code Formatting
               run: npm run format:check
+
+            - name: Scan Repository for Secrets
+              uses: gitleaks/gitleaks-action@v2
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Run npm Audit
               run: npm audit --audit-level=high
