@@ -11,7 +11,7 @@ import * as aws from "@pulumi/aws";
  */
 
 export const bucket = new aws.s3.Bucket("platform-storage", {
-    forceDestroy: true,
+    forceDestroy: false,
 });
 // set to false if you dont want to delete the objects mistakenly
 export const bucketName = bucket.id;
